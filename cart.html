@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- METAS -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="WAZI">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE TITLE ARE SAFE. SINCE THEY ARE BEING GENERATED INSIDE THE SYSTEM -->
+  <title>Your Cart | DCT Hospitality</title>
+  <link rel="shortcut icon" href="">
+  <!-- STYLES -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+
+  <!-- Simple line Icon -->
+  <link rel="stylesheet" href="simple-line-icons.css">
+
+  <!-- Hover Effects -->
+  <link rel="stylesheet" href="set1.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+	
+  <link rel="stylesheet" href="styles2.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="toastr.css">
+
+  <!-- Page wise style -->
+  <!-- LEAFLET CSS -->
+  <link rel="stylesheet" href="leaflet.css">
+
+  <style>
+    #mapid1 {
+      height: 260px;
+    }
+
+    #mapid2 {
+      height: 260px;
+    }
+
+    #mapid3 {
+      height: 260px;
+    }
+
+
+    .note {
+      font-size: 13px;
+    }
+  </style>
+  <!-- Custom MODAL CSS -->
+  <link rel="stylesheet" href="modal.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom.css"></head>
+<body>
+<!-- MAIN CONTENT -->
+<!-- NAVIGATION BAR -->
+<div class="light-bg sticky-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand ml-auto mr-0 order-10" href="javascript:void(0)"> <img src="assets/doh-logo.svg" class="system-icon"></a>
+          <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-menu"></span>
+          </button>
+          <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+          <div class="" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <!-- <li class="cart-btn-for-large-device">
+                  <a href="cart.html" class="btn btn-outline-dark cart-btn"><span class="cart-items" id="#cart-items">0</span><span class="ti-shopping-cart"></span></a>
+              </li> -->
+              <li class="position-relative cart-dropdown-container">
+                <a href="javascript:void(0)" class="btn btn-outline-dark cart-btn"><span class="cart-items" id="#cart-items">0</span><img src="assets/cart-shopping-solid.svg" width="25" height="25"></a>
+                <div class="js-cart-dropdown-wrap">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div><!-- RESTAURANT TITLE HEADER -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="booking-checkbox_wrap w-100">
+      <h5 class="text-left">
+        <img src="assets/cart-shopping-solid.svg" width="25" height="25"> Your Orders                <div class="featured-btn-wrap d-inline">
+        <a href="menu.html" class="btn btn-outline-danger float-right">
+          <img src="assets/angle-red.png" width="25" height="25"> Add items                    </a>
+      </div>
+      </h5>
+    </div>
+  </div>
+</div>
+<!-- MAIN CONTENT -->
+<section class=" light-bg booking-details_wrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 responsive-wrap">
+        <div class="booking-checkbox_wrap mb-2">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <img src="assets/empty.png" class="img-fluid" alt="empty-cart-logo">
+              <span class="d-block mt-2">You got nothing to order</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>    <!-- FOOTER -->
+<!--
+<div class="sticky-cart-btn-area">
+<a href="cart.html" class="sticky-cart-btn btn-block">
+    <span class="sticky-cart-btn-label">
+        <i class="fas fa-shopping-bag"></i> Basket            <span class="sticky-cart-btn-cart-item-area">
+            <span class="cart-items" id="#cart-items">
+            0                </span>
+        </span>
+    </span>
+</a>
+</div>
+-->
+
+
+<!--============================= FOOTER =============================-->
+<footer class="main-block dark-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="copyright">
+          <p><a href="index.html" target="_blank">©2022 DHYAFAH</a></p>
+          <ul>
+            <li><a href=""><img src="assets/facebook-grey.png" width="25" height="25"> </a></li>
+            <li><a href=""><img src="assets/twitter-grey.png" width="25" height="25"></a></li>
+            <li><a href=""><img src="assets/instagram-grey.png" width="25" height="25"></a></li>
+          </ul>
+          <ul class="footer-page-links">
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy policy</a></li>
+            <li><a href="">Terms and conditions</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="select mt-3">
+          <select name="slct" id="slct" onchange="switch_language(this.value)" class="language-selector">
+              <option disabled>Choose language</option>
+                                      <option value="en" selected>English</option>
+                                      <option value="fr" >French</option>
+                                      <option value="es" >Espanol</option>
+                              </select>
+      </div> -->
+    </div>
+  </div>
+</footer>
+<!--============================= FOOTER =============================-->    <!-- SCRIPTS -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="jquery-3.2.1.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<!-- Toastr -->
+<script src="toastr.min.js"></script>
+<!-- Page wise script -->
+<!-- Leaflet JS -->
+<script src="leaflet.js"></script>
+
+<script>
+  "use strict";
+  // CART OPERATIONS
+  function updateCart(cartId, isIncreased, ths) {
+    var cartQty = $(ths).closest('.row').find('.cart-quantity-' + cartId);
+    var currentQuantity = cartQty.text();
+
+    // SHOWING PLACEHOLDERS
+    $(".summary-loader").removeClass('d-none');
+    $('#sub-total-' + cartId).html('<i class="fas fa-spinner fa-pulse"></i>');
+    $('.cart-actions').prop('disabled', true);
+
+    if (isIncreased) {
+      currentQuantity = parseInt(currentQuantity) + 1;
+    } else {
+      currentQuantity = parseInt(currentQuantity) - 1;
+      if (currentQuantity == 0) {
+        currentQuantity = 1;
+      }
+    }
+    $('.cart-quantity-' + cartId).text(currentQuantity);
+
+    $.ajax({
+      url: 'update_cart',
+      type: 'POST',
+      data: {
+        cartId: cartId,
+        quantity: currentQuantity,
+      },
+      success: function(response) {
+        var response = JSON.parse(response);
+        $('#sub-total-' + cartId).text(response.updated_price);
+        $('.js-cart-dropdown-wrap').html(response.cart_html);
+        $.ajax({
+          url: 'reload_cart_summary',
+          success: function(response) {
+            $('#cart-summary').html(response);
+            $('.cart-actions').prop('disabled', false);
+            $(".summary-loader").addClass('d-none');
+          }
+        });
+      }
+    });
+  }
+
+
+  // MAP 1 INITIALIZING
+  var map = L.map('mapid1').setView([0, 0], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  L.marker([0, 0]).addTo(map)
+    .bindPopup('Not found');
+
+
+  // MAP 2 INITIALIZING
+  var map = L.map('mapid2').setView([0, 0], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  L.marker([0, 0]).addTo(map)
+    .bindPopup('Not found');
+
+  // MAP 3 INITIALIZING
+  var map = L.map('mapid3').setView([0, 0], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  L.marker([0, 0]).addTo(map)
+    .bindPopup('Not found');
+
+
+  function toggleMap(addressNumber) {
+    $(".address-map").hide();
+    $("#mapid" + addressNumber).show();
+    $("#address-number").val(addressNumber);
+  }
+  $(document).ready(() => {
+    $("#mapid2").hide();
+    $("#mapid3").hide();
+    $("#address-number").val(1);
+  });
+</script>
+
+<!-- Initialize common scripts for frontend and backend here -->
+<!-- SHOW TOASTR NOTIFIVATION -->
+
+
+
+<script type="text/javascript">
+  "use strict";
+
+
+<script>
+  // CART OPERATIONS
+  function updateCartPopup(cartId, isIncreased, ths) {
+    var cartQty = $(ths).closest('.row').find('.cart-quantity-' + cartId);
+    var currentQuantity = cartQty.text();
+
+    // SHOWING PLACEHOLDERS
+    $(".summary-loader").removeClass('d-none');
+    $('.cart-actions').prop('disabled', true);
+
+    if (isIncreased) {
+      currentQuantity = parseInt(currentQuantity) + 1;
+    } else {
+      currentQuantity = parseInt(currentQuantity) - 1;
+      if (currentQuantity == 0) {
+        currentQuantity = 1;
+      }
+    }
+    $('.cart-quantity-' + cartId).text(currentQuantity);
+
+    $.ajax({
+      url: 'update_cart',
+      type: 'POST',
+      data: {
+        cartId: cartId,
+        quantity: currentQuantity,
+      },
+      success: function(response) {
+        $('.cart-actions').prop('disabled', false);
+        $(".summary-loader").addClass('d-none');
+      }
+    });
+  }
+</script>    <!-- MODAL -->
+<script type="text/javascript">
+  "use strict";
+
+  function showLargeModal(url, header) {
+    // SHOWING AJAX PRELOADER IMAGE
+    jQuery('#large-modal .modal-body').html('...');
+    jQuery('#large-modal .modal-title').html('...');
+    // LOADING THE AJAX MODAL
+    jQuery('#large-modal').modal('show', {
+      backdrop: 'true'
+    });
+
+    // SHOW AJAX RESPONSE ON REQUEST SUCCESS
+    $.ajax({
+      url: url,
+      success: function(response) {
+        jQuery('#large-modal .modal-body').html(response);
+        jQuery('#large-modal .modal-title').html(header);
+      }
+    });
+  }
+
+  function showCartModal(url, header) {
+    // SHOWING AJAX PRELOADER IMAGE
+    jQuery('#modal-with-header-for-cart .modal-body').html('...');
+    // LOADING THE AJAX MODAL
+    jQuery('#modal-with-header-for-cart').modal('show', {
+      backdrop: 'true'
+    });
+
+    // SHOW AJAX RESPONSE ON REQUEST SUCCESS
+    $.ajax({
+      url: url,
+      success: function(response) {
+        jQuery('#modal-with-header-for-cart .title').html(header);
+        jQuery('#modal-with-header-for-cart .modal-body').html(response);
+      }
+    });
+  }
+
+  function showModalWithHeader(url, header) {
+    // SHOWING AJAX PRELOADER IMAGE
+    jQuery('#modal-with-header .modal-body').html('...');
+    // LOADING THE AJAX MODAL
+    jQuery('#modal-with-header').modal('show', {
+      backdrop: 'true'
+    });
+
+    // SHOW AJAX RESPONSE ON REQUEST SUCCESS
+    $.ajax({
+      url: url,
+      success: function(response) {
+        jQuery('#modal-with-header .title').html(header);
+        jQuery('#modal-with-header .modal-body').html(response);
+      }
+    });
+  }
+
+  function confirm_modal(delete_url) {
+    jQuery('#alert-modal').modal('show', {
+      backdrop: 'static'
+    });
+    document.getElementById('update_link').setAttribute('href', delete_url);
+  }
+</script>
+
+<!-- (Large Modal)-->
+<div class="modal fade" id="large-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">...</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<!-- Info Alert Modal -->
+<div id="alert-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body p-4">
+        <div class="text-center">
+          <i class="dripicons-information h1 text-info"></i>
+          <h4 class="mt-2">Heads up!</h4>
+          <p class="mt-3">Are you sure?</p>
+          <button type="button" class="btn btn-info my-2" data-dismiss="modal">Cancel</button>
+          <a href="#" id="update_link" class="btn btn-danger my-2">Continue</a>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--STYLISH MODAL WITH HEADER FOR CART-->
+<div class="modal fade modal-with-header" id="modal-with-header-for-cart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal larger" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="title">...</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mb-0">
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--STYLISH MODAL WITH HEADER FOR CART-->
+
+<!--STYLISH MODAL WITH HEADER-->
+<div class="modal fade modal-with-header" id="modal-with-header" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="title">...</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mb-0">
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--STYLISH MODAL WITH HEADER-->    <!-- <script>
+    window.Userback = window.Userback || {};
+    Userback.access_token = '37264|72626|vdXwN3GJyVhnuQDbkxqulFZBL';
+    (function(d) {
+        var s = d.createElement('script');s.async = true;
+        s.src = 'https://static.userback.io/widget/v1.js';
+        (d.head || d.body).appendChild(s);
+    })(document);
+    </script> -->
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/630caf4f37898912e965f2fc/1gbkopjps';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script-->
+</body>
+</html>
